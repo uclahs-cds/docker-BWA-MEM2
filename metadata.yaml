@@ -1,10 +1,10 @@
 ---
 Category: 'docker'
-Description: 'Template Docker repository for tool_name'  # Description of why the repository exists
-Maintainers: ['YourName@mednet.ucla.edu']  # email address of maintainers
-Contributors: ['Your Name']  # Full names of contributors
-Languages: ['Dockerfile']  # programming languages used
-Tools: ['tool_name']  # Name of the tool(s) used in the Dockerfile
-Version: ['X.X.X']  # Tool version number
-Purpose of tool: ''  # Description of what this tool does
-References: ''  # is the tool/dependencies published, is there a confluence page
+Description: 'Docker repository for BWA-MEM2 and SAMtools'
+Maintainers: ['YashPatel@mednet.ucla.edu']
+Contributors: ['Yash Patel']
+Languages: ['Dockerfile']
+Tools: ['BWA-MEM2', 'SAMtools']
+Version: ['2.2.1', '1.10']
+Purpose of tool: 'Software packages for mapping DNA sequences against a large reference genome and interacting with high-thouroughput sequencing data'
+References: 'https://github.com/bwa-mem2/bwa-mem2;http://www.htslib.org'

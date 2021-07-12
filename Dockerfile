@@ -1,14 +1,24 @@
-FROM blcdsdockerregistry/bl-base:1.0.0 AS builder
+FROM continuumio/miniconda3:4.8.2
 
-# Use conda to install tools and dependencies into /usr/local
-ARG TOOL_VERSION=X.X.X
-RUN conda create -qy -p /usr/local \
-    -c bioconda \
-    -c conda-forge \
-    tool_name==${TOOL_VERSION}
+LABEL maintainer="Ben Carlin <bcarlin@mednet.ucla.edu>"
 
-# Deploy the target tools into a base image
-FROM ubuntu:20.04
-COPY --from=builder /usr/local /usr/local
+# add channels in correct order to avoid missing libcrypto dependency
+# https://github.com/bioconda/bioconda-recipes/issues/12100
+RUN conda update -n base -c defaults conda && \
+    conda install -q -y -c bioconda bwa-mem2=2.2.1 && \
+    conda clean --all -y 
 
-LABEL maintainer="Your Name <YourName@mednet.ucla.edu>"
+CMD ["bwa-mem2"]
+
+# https://github.com/bioconda/bioconda-recipes/issues/12100
+RUN conda update -n base -c defaults conda &&\
+      conda config --add channels defaults && \
+      conda config --add channels bioconda && \
+      conda config --add channels conda-forge && \
+      conda install -q -y samtools==1.10 && \
+      conda clean --all -y 
+
+# ps and command for reporting mertics 
+RUN apt-get update && \
+    apt-get install --no-install-recommends -y procps && \
+    rm -rf /var/lib/apt/lists/*
