@@ -15,10 +15,10 @@ RUN conda create -qy -p /usr/local \
 
 CMD ["bwa-mem2"]
 
+FROM ubuntu:20.04
+COPY --from=builder /usr/local /usr/local
+
 # ps and command for reporting mertics 
 RUN apt-get update && \
     apt-get install --no-install-recommends -y procps && \
     rm -rf /var/lib/apt/lists/*
-
-FROM ubuntu:20.04
-COPY --from=builder /usr/local /usr/local
