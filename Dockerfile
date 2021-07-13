@@ -13,8 +13,6 @@ RUN conda create -qy -p /usr/local \
     bwa-mem2==${BWA_MEM2_VERSION} \
     samtools==${SAMTOOLS_VERSION}
 
-CMD ["bwa-mem2"]
-
 FROM ubuntu:20.04
 COPY --from=builder /usr/local /usr/local
 
@@ -22,3 +20,5 @@ COPY --from=builder /usr/local /usr/local
 RUN apt-get update && \
     apt-get install --no-install-recommends -y procps && \
     rm -rf /var/lib/apt/lists/*
+
+CMD ["bwa-mem2"]
