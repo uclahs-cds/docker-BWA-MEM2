@@ -1,7 +1,7 @@
 # docker-BWA-MEM2
 Dockerfile for BWA-MEM2 (for mapping DNA sequences against a large reference genome) and SAMtools (for interacting with high-thouroughput sequencing data) used for pipeline-align-DNA.
 
-The BWA-MEM2 image with SAMtools is located in the Boutros Lab Docker Hub repo: https://hub.docker.com/repository/docker/blcdsdockerregistry/bwa-mem2_samtools-1.10
+The current BWA-MEM2 image with SAMtools is located in the Boutros Lab Docker Hub repo: https://hub.docker.com/repository/docker/blcdsdockerregistry/align-dna:bwa-mem2-2.2.1_samtools-1.10. Future updated images will be hosted in separate Boutros Lab Docker Hub repos.
 
 # Documentation
 Documentation for BWA-MEM2 can be found here: https://github.com/bwa-mem2/bwa-mem2. Documentation for SAMtools: http://www.htslib.org/doc/.
