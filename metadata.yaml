@@ -2,7 +2,7 @@
 Category: 'docker'
 Description: 'Docker repository for BWA-MEM2 and SAMtools'
 Maintainers: ['YashPatel@mednet.ucla.edu']
-Contributors: ['Yash Patel']
+Contributors: ['Yash Patel', 'Chenghao Zhu', 'Benjamin Carlin', 'Aakarsh Anand']
 Languages: ['Dockerfile']
 Tools: ['BWA-MEM2', 'SAMtools']
 Version: ['2.2.1', '1.10']

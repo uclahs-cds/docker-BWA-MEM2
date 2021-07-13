@@ -1,6 +1,6 @@
 FROM blcdsdockerregistry/bl-base:1.0.0 AS builder
 
-LABEL maintainer="Ben Carlin <bcarlin@mednet.ucla.edu>"
+LABEL maintainer="Yash Patel <YashPatel@mednet.ucla.edu>"
 
 # add channels in correct order to avoid missing libcrypto dependency
 # https://github.com/bioconda/bioconda-recipes/issues/12100

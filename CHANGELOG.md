@@ -11,7 +11,7 @@ This project adheres to [Semantic Versioning](https://semver.org/spec/v2.0.0.htm
 
 ---
 
-## [BWA-MEM2-2.2.1_SAMtools-1.10] - 2021-07-12
+## [2.2.1] - 2021-07-13
 ### Added
 - Created new repository
 - Added copied Dockerfile from pipeline-align-DNA
