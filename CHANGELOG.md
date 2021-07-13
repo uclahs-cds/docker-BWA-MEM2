@@ -15,3 +15,4 @@ This project adheres to [Semantic Versioning](https://semver.org/spec/v2.0.0.htm
 ### Added
 - Created new repository
 - Added copied Dockerfile from pipeline-align-DNA
+- Updated SAMtools to v1.12

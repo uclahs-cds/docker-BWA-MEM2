@@ -5,7 +5,7 @@ LABEL maintainer="Yash Patel <YashPatel@mednet.ucla.edu>"
 # add channels in correct order to avoid missing libcrypto dependency
 # https://github.com/bioconda/bioconda-recipes/issues/12100
 ARG BWA_MEM2_VERSION=2.2.1
-ARG SAMTOOLS_VERSION=1.10
+ARG SAMTOOLS_VERSION=1.12
 RUN conda create -qy -p /usr/local \
     -c defaults \
     -c bioconda \
