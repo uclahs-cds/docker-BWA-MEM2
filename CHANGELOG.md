@@ -6,9 +6,9 @@ The format is based on [Keep a Changelog](https://keepachangelog.com/en/1.0.0/).
 This project adheres to [Semantic Versioning](https://semver.org/spec/v2.0.0.html).
 
 ---
-
-## [Unreleased]
-
+## [Unreleased] - 2023-06-05
+### Changed:
+- Update SAMTools to v1.17
 ---
 
 ## [2.2.1] - 2021-07-13

@@ -1,12 +1,12 @@
-FROM blcdsdockerregistry/bl-base:1.0.0 AS builder
+ARG MINIFORGE_VERSION=22.9.0-2
 
-LABEL maintainer="Yash Patel <YashPatel@mednet.ucla.edu>"
+FROM condaforge/mambaforge:${MINIFORGE_VERSION} AS builder
 
 # add channels in correct order to avoid missing libcrypto dependency
 # https://github.com/bioconda/bioconda-recipes/issues/12100
 ARG BWA_MEM2_VERSION=2.2.1
-ARG SAMTOOLS_VERSION=1.12
-RUN conda create -qy -p /usr/local \
+ARG SAMTOOLS_VERSION=1.17
+RUN mamba create -qy -p /usr/local \
     -c defaults \
     -c bioconda \
     -c conda-forge \
@@ -16,9 +16,12 @@ RUN conda create -qy -p /usr/local \
 FROM ubuntu:20.04
 COPY --from=builder /usr/local /usr/local
 
-# ps and command for reporting mertics 
-RUN apt-get update && \
-    apt-get install --no-install-recommends -y procps && \
-    rm -rf /var/lib/apt/lists/*
+# Add a new user/group called bldocker
+RUN groupadd -g 500001 bldocker && \
+    useradd -r -u 500001 -g bldocker bldocker
 
-CMD ["bwa-mem2"]
+# Change the default user to bldocker from root
+USER bldocker
+
+LABEL maintainer="Yash Patel <YashPatel@mednet.ucla.edu>" \ 
+org.opencontainers.image.source=https://github.com/uclahs-cds/docker-BWA-MEM2
