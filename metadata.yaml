@@ -8,4 +8,4 @@ Tools: ['BWA-MEM2', 'SAMtools v1.17']
 Version: ['2.2.1']
 Purpose of tool: 'Software packages for mapping DNA sequences against a large reference genome and interacting with high-thouroughput sequencing data'
 References: 'https://github.com/bwa-mem2/bwa-mem2;http://www.htslib.org'
-Image_Name: 'bwa-mem2_samtools-1.17'
+image_name: 'bwa-mem2'
