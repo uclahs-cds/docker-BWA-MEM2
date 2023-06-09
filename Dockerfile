@@ -23,5 +23,5 @@ RUN groupadd -g 500001 bldocker && \
 # Change the default user to bldocker from root
 USER bldocker
 
-LABEL maintainer="Yash Patel <YashPatel@mednet.ucla.edu>" \ 
+LABEL maintainer="Beth Neilsen <BNeilsen@mednet.ucla.edu>" \ 
 org.opencontainers.image.source=https://github.com/uclahs-cds/docker-BWA-MEM2
