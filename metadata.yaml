@@ -2,9 +2,10 @@
 Category: 'docker'
 Description: 'Docker repository for BWA-MEM2 and SAMtools'
 Maintainers: ['YashPatel@mednet.ucla.edu']
-Contributors: ['Yash Patel', 'Chenghao Zhu', 'Benjamin Carlin', 'Aakarsh Anand']
+Contributors: ['Yash Patel', 'Chenghao Zhu', 'Benjamin Carlin', 'Aakarsh Anand', 'Beth Neilsen']
 Languages: ['Dockerfile']
-Tools: ['BWA-MEM2', 'SAMtools v1.12']
+Tools: ['BWA-MEM2', 'SAMtools v1.17']
 Version: ['2.2.1']
 Purpose of tool: 'Software packages for mapping DNA sequences against a large reference genome and interacting with high-thouroughput sequencing data'
 References: 'https://github.com/bwa-mem2/bwa-mem2;http://www.htslib.org'
+image_name: 'bwa-mem2'
