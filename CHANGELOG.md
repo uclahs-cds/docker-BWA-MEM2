@@ -7,6 +7,8 @@ This project adheres to [Semantic Versioning](https://semver.org/spec/v2.0.0.htm
 
 ---
 ## [Unreleased]
+
+## [2.2.1_samtools-1.17] - 2023-08-04
 ### Added:
 - Added autobuild workflow action
 
