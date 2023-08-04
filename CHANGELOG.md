@@ -7,13 +7,15 @@ This project adheres to [Semantic Versioning](https://semver.org/spec/v2.0.0.htm
 
 ---
 ## [Unreleased]
-### Added: 
+### Added:
 - Added autobuild workflow action
 
 ### Changed:
 - Update SAMTools to v1.17
----
+- Updated to use bl-base:1.0.0 as builder
+- Updated to use SAMTools Docker Image as base image instead of Ubuntu and installing SAMTools again to improve efficiency
 
+---
 ## [2.2.1] - 2021-07-13
 ### Added
 - Created new repository
