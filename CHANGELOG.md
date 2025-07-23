@@ -8,6 +8,11 @@ This project adheres to [Semantic Versioning](https://semver.org/spec/v2.0.0.htm
 ---
 ## [Unreleased]
 
+## [2.3_samtools-1.17] - 2025-07-22
+### Changed:
+ - Update to BWA-MEM v2.3
+
+---
 ## [2.2.1_samtools-1.17] - 2023-08-08
 ### Added:
 - Added autobuild workflow action
