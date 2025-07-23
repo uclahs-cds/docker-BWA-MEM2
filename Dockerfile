@@ -3,7 +3,7 @@ ARG SAMTOOLS_VERSION=1.17
 
 FROM condaforge/mambaforge:${MINIFORGE_VERSION} AS builder
 
-ARG BWA_MEM2_VERSION=2.2.1
+ARG BWA_MEM2_VERSION=2.3
 
 RUN mamba create -qy -p /usr/local \
     -c defaults \
