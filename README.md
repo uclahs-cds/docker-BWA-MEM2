@@ -10,7 +10,7 @@ Documentation for BWA-MEM2 can be found here: https://github.com/bwa-mem2/bwa-me
 | Tool | Version |
 |------|---------|
 |BWA-MEM2|2.3|
-|SAMtools|1.17|
+|SAMtools|1.22|
 
 ---
 
